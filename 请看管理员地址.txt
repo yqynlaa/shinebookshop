@@ -1,0 +1,3 @@
+访问xxx/jsp/admin/login.jsp进入管理员界面 账号admin 密码admin
+xxx根据自己的配置修改
+
