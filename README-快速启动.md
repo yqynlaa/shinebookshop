@@ -1,65 +1,127 @@
-# 闪耀书店管理系统 - 一键启动指南
+# ShineBookShop – Online Bookstore System
 
-## 🚀 快速启动
+ShineBookShop is a JSP- and Java-based online bookstore system that allows users to browse books, search by categories or keywords, manage shopping carts, place orders, and enables administrators to maintain products, users, and orders through a backend management interface. The system adopts a three-tier architecture consisting of JSP (frontend display), Java Servlets and JavaBeans (business logic), and MySQL (data storage).
 
-1. **双击运行** `一键启动.bat`
-2. **等待脚本完成**所有配置
-3. **IntelliJ IDEA会自动打开**项目
-4. **点击运行按钮**启动项目
+---
 
-## 📋 使用说明
+## 1. Quick Start (One-Click Launch)
 
-### 自动化脚本
+### Start the System
 
-- **`一键启动.bat`** - 完整的自动化启动脚本
-- **`项目状态检查.bat`** - 检查项目环境和配置状态
+1. Double-click `Start_Project.bat`
+2. Wait for the script to complete automatic configuration
+3. IntelliJ IDEA will open automatically
+4. Click **Run** in IntelliJ IDEA to start the project
 
-### 访问地址
+### Access Addresses
 
-- **前台首页**: http://localhost:8080/shinebookshop/
-- **管理后台**: http://localhost:8080/shinebookshop/admin
+| Module            | URL                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| Frontend Homepage | [http://localhost:8080/shinebookshop/](http://localhost:8080/shinebookshop/)           |
+| Admin Backend     | [http://localhost:8080/shinebookshop/admin](http://localhost:8080/shinebookshop/admin) |
 
-### 默认账号
+### Default Administrator Account
 
-- **管理员**: admin / admin
+| Role          | Username | Password |
+| ------------- | -------- | -------- |
+| Administrator | admin    | admin    |
 
-## ⚙️ 系统要求
+---
 
-- ✅ Java 1.8+
-- ✅ MySQL 5.7+ / 8.0+
-- ✅ IntelliJ IDEA
-- ✅ Apache Tomcat 8.5+
+## 2. Automation Scripts
 
-## 🔧 已完成的自动化配置
+| Script              | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| `Start_Project.bat` | Full automatic startup script                      |
+| `Check_Status.bat`  | Environment and configuration status checking tool |
 
-1. ✅ **数据库连接配置** - 自动优化MySQL 8.0兼容性
-2. ✅ **IntelliJ IDEA项目配置** - 自动生成运行配置
-3. ✅ **Tomcat运行配置** - 一键启动Web服务器
-4. ✅ **依赖库管理** - 所有JAR包已配置
-5. ✅ **编码设置** - UTF-8字符编码
-6. ✅ **数据库检查** - 自动验证并导入数据
+---
 
-## 🐛 问题排查
+## 3. System Requirements
 
-如果遇到问题，请按顺序检查：
+| Component  | Version Requirement        |
+| ---------- | -------------------------- |
+| Java       | JDK 1.8 or above           |
+| Database   | MySQL 5.7 / 8.0            |
+| IDE        | IntelliJ IDEA              |
+| Web Server | Apache Tomcat 8.5 or above |
 
-1. **运行** `项目状态检查.bat` 查看详细状态
-2. **检查MySQL服务** - 确保服务运行正常
-3. **验证端口占用** - 确保8080端口未被占用
-4. **确认Tomcat配置** - 在IntelliJ IDEA中配置Tomcat服务器
+---
 
-## 📁 项目结构
+## 4. Automated Configuration Included
+
+| Item                                     | Status                  |
+| ---------------------------------------- | ----------------------- |
+| Database connection and compatibility    | Completed               |
+| IntelliJ IDEA project configuration      | Automatically generated |
+| Tomcat runtime configuration             | One-click deployment    |
+| Dependency libraries (JAR)               | Fully configured        |
+| Character encoding                       | UTF-8                   |
+| Database initialization and verification | Automatically performed |
+
+---
+
+## 5. Troubleshooting
+
+If the project fails to start, follow the steps below:
+
+1. Run `Check_Status.bat` to view environment reports
+2. Ensure MySQL service is running
+3. Check whether port **8080** is already occupied
+4. Confirm Tomcat is configured in IntelliJ IDEA
+
+---
+
+## 6. Project Structure
 
 ```
 shinebookshop/
-├── 一键启动.bat          # 主启动脚本
-├── 项目状态检查.bat      # 状态检查工具
-├── src/                  # Java源代码
-├── WebContent/           # Web资源
-├── .idea/               # IntelliJ IDEA配置
-└── shinebookshop.sql    # 数据库脚本
+├── Start_Project.bat            # Main startup script
+├── Check_Status.bat             # Environment check tool
+├── src/                         # Java source code
+│   ├── servlet/                 # Servlet controllers
+│   ├── beans/                   # JavaBeans data models
+│   └── util/                    # JDBC utilities
+├── WebContent/                  # JSP pages and web resources
+├── lib/                         # Dependency JAR files
+├── shinebookshop.sql            # Database schema file
+└── README.md
 ```
 
 ---
 
-**🎯 目标达成**: 您现在只需要双击 `一键启动.bat`，然后在IDEA中点击运行按钮即可！
+## 7. System Features
+
+### Frontend Functions
+
+* Book browsing and search
+* Category-based display
+* Shopping cart and checkout process
+* Member registration and login
+* Order history and status tracking
+
+### Backend Management
+
+* Book information maintenance (add / edit / delete)
+* Category management
+* User management (freeze / unfreeze)
+* Order processing and details
+
+---
+
+## 8. Database Overview
+
+The database contains six main tables:
+
+* `s_user` — user information
+* `s_book` — book details
+* `tb_Order` — order main table
+* `tb_order_detail` — order item details
+* `s_catalog` — categories
+* `s_admin` — administrator accounts
+
+Database script file: `shinebookshop.sql`
+
+---
+
+
